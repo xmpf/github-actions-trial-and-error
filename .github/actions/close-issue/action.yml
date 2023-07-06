@@ -1,0 +1,24 @@
+name: Auto-reply to new issues
+
+on:
+  issues:
+    types: [opened]
+
+jobs:
+  auto_reply:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Auto-reply to issue
+        uses: actions/github-script@v4
+        with:
+          script: |
+            const message = `
+              Thank you for creating a new issue. Our team will review your issue as soon as possible. 
+              Please remember to provide as much information as you can!
+            `
+            github.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: message
+            })
