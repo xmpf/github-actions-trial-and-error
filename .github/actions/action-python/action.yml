@@ -4,7 +4,7 @@ description: custom action description
 runs:
   using: 'composite'
   steps:
-    - name: action1
-      id: action-1
+    - name: action python
+      id: action-python
       shell: bash
-      run: node ./.github/actions-scripts/action1-script/index.js
+      run: node ./.github/actions-scripts/action-python/main.py

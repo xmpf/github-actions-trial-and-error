@@ -17,6 +17,6 @@ jobs:
 
             - name: test action
               id: test-action
-              uses: ./.github/actions/action1
+              uses: ./.github/actions/action-javascript
               with:
                 base-dir: '.'

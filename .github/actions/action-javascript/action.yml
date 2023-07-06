@@ -1,0 +1,10 @@
+name: custom action
+description: custom action description
+
+runs:
+  using: 'composite'
+  steps:
+    - name: action javascript
+      id: action-javascript
+      shell: bash
+      run: node ./.github/actions-scripts/action-javascript/index.js
