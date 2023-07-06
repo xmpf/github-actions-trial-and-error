@@ -26,3 +26,5 @@ jobs:
               uses: ./.github/actions/action-python
               with:
                 base-dir: '.'
+    issues:
+        uses: ./.github/workflows/issues.yml
