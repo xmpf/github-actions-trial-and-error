@@ -4,7 +4,7 @@ jobs:
     build:
         runs-on: ubuntu-latest
         steps:
-            - uses: actions/checkout@v2
+            - uses: actions/checkout@v3
 
             - name: sample bash command
               run: |
@@ -13,3 +13,8 @@ jobs:
 
             - name: hello
               uses: actions/hello-world-javascript-action@v1
+
+            - name: test action
+              uses: ./.github/actions/action1
+              with:
+                base-dir: '.'
