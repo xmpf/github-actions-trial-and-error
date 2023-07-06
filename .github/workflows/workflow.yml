@@ -26,9 +26,3 @@ jobs:
               uses: ./.github/actions/action-python
               with:
                 base-dir: '.'
-            
-            - name: add comment to issues
-              id: close-issues
-              uses: ./.github/actions/close-issue
-              with:
-                base-dir: '.'
