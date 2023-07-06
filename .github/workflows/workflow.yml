@@ -16,7 +16,13 @@ jobs:
               uses: actions/hello-world-javascript-action@v1
 
             - name: test action
-              id: test-action
+              id: test-action-javascript
               uses: ./.github/actions/action-javascript
+              with:
+                base-dir: '.'
+            
+            - name: test action
+              id: test-action-python
+              uses: ./.github/actions/action-python
               with:
                 base-dir: '.'
