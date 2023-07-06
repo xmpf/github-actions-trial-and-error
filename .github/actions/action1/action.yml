@@ -1,13 +1,10 @@
-name: learn-github-actions
-run-name: xmpf is learning GitHub Actions
-on: [push]
-jobs:
-  check-bats-version:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
-        with:
-          node-version: '14'
-      - run: npm install -g bats
-      - run: bats -v
+name: custom action
+description: custom action description
+
+runs:
+  using: 'composite'
+  steps:
+    - name: action1
+      id: action-1
+      shell: bash
+      run: node ./.github/actions-scripts/action1-script/index.js
